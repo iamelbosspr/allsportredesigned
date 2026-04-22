@@ -1,0 +1,56 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 1606 >>
+stream
+BT /F2 18 Tf 54 752 Td (App Summary \\(Repo Evidence\\)) Tj ET
+BT /F2 11 Tf 54 724 Td (What It Is) Tj ET
+BT /F1 9.5 Tf 54 710 Td (Not found in repo. This repository currently contains only .git metadata and no app files.) Tj ET
+BT /F2 11 Tf 54 686 Td (Who It's For) Tj ET
+BT /F1 9.5 Tf 54 672 Td (Primary user/persona: Not found in repo.) Tj ET
+BT /F2 11 Tf 54 648 Td (What It Does) Tj ET
+BT /F1 9.5 Tf 68 634 Td (- No application features are implemented in the current repository state.) Tj ET
+BT /F1 9.5 Tf 68 621 Td (- Git repository initialized \\(branch exists, no commits\\).) Tj ET
+BT /F1 9.5 Tf 68 608 Td (- No source files found under workspace root.) Tj ET
+BT /F1 9.5 Tf 68 595 Td (- No package/dependency manifests found.) Tj ET
+BT /F1 9.5 Tf 68 582 Td (- No configuration files for runtime/services found.) Tj ET
+BT /F1 9.5 Tf 68 569 Td (- No tests, scripts, or documentation found.) Tj ET
+BT /F2 11 Tf 54 546 Td (How It Works \\(Architecture\\)) Tj ET
+BT /F1 9.5 Tf 54 532 Td (Components/services/data flow: Not found in repo.) Tj ET
+BT /F1 9.5 Tf 54 519 Td (Evidence basis: filesystem scan shows only .git internals; no runnable app artifacts.) Tj ET
+BT /F2 11 Tf 54 495 Td (How To Run) Tj ET
+BT /F1 9.5 Tf 68 481 Td (1. Not found in repo: no executable source, entrypoint, or run script detected.) Tj ET
+BT /F1 9.5 Tf 68 468 Td (2. Not found in repo: no dependency manifest \\(e.g., package.json, pyproject.toml\\).) Tj ET
+BT /F1 9.5 Tf 68 455 Td (3. Not found in repo: no setup instructions or README available.) Tj ET
+BT /F1 8 Tf 360 30 Td (Generated from repository evidence only) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+0000002036 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2053
+%%EOF
