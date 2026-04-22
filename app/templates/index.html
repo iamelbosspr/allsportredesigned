@@ -50,6 +50,7 @@
         radial-gradient(circle at 72% 60%, rgba(27, 88, 119, 0.26), transparent 30%),
         linear-gradient(180deg, #07131d 0%, #0a1b29 48%, #08141f 100%);
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -365,6 +366,77 @@
       align-content: start;
     }
 
+    .media-frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .media-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7, 20, 31, 0) 0%, rgba(7, 20, 31, 0.18) 100%);
+      pointer-events: none;
+    }
+
+    .media-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-art-card {
+      min-height: 338px;
+      background:
+        radial-gradient(circle at 78% 20%, rgba(221, 183, 120, 0.22), transparent 24%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+    }
+
+    .hero-art-card img {
+      width: 100%;
+      min-height: 338px;
+      object-fit: cover;
+    }
+
+    .art-badge {
+      position: absolute;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(6, 16, 25, 0.72);
+      backdrop-filter: blur(14px);
+      color: #f4f1ea;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .art-badge::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--sea));
+    }
+
+    .art-badge.top {
+      top: 18px;
+      left: 18px;
+    }
+
+    .art-badge.bottom {
+      right: 18px;
+      bottom: 18px;
+    }
+
     .showcase-card {
       padding: 24px;
       border-radius: 24px;
@@ -532,9 +604,70 @@
       padding: 30px;
     }
 
+    .catalog-masthead {
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .catalog-copy-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .catalog-copy-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .catalog-copy-card strong {
+      color: #fff5df;
+      font-size: 1.18rem;
+      line-height: 1.4;
+    }
+
+    .catalog-visual {
+      min-height: 260px;
+      background:
+        radial-gradient(circle at 78% 20%, rgba(134, 210, 199, 0.18), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+    }
+
+    .catalog-visual img {
+      width: 100%;
+      min-height: 260px;
+      object-fit: cover;
+    }
+
     .about-grid {
       grid-template-columns: 1.05fr 0.95fr;
       align-items: start;
+    }
+
+    .about-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .about-visual {
+      min-height: 300px;
+      background:
+        radial-gradient(circle at 70% 18%, rgba(221, 183, 120, 0.18), transparent 24%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+    }
+
+    .about-visual img {
+      width: 100%;
+      min-height: 300px;
+      object-fit: cover;
     }
 
     .about-lead {
@@ -734,6 +867,19 @@
       align-content: start;
     }
 
+    .spotlight-art {
+      min-height: 250px;
+      background:
+        radial-gradient(circle at 76% 18%, rgba(221, 183, 120, 0.2), transparent 26%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+    }
+
+    .spotlight-art img {
+      width: 100%;
+      min-height: 250px;
+      object-fit: cover;
+    }
+
     .spotlight-chip {
       width: fit-content;
       padding: 8px 14px;
@@ -809,6 +955,91 @@
       gap: 14px;
     }
 
+    .price-visual {
+      min-height: 214px;
+      padding: 24px;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        radial-gradient(circle at 76% 20%, rgba(221, 183, 120, 0.18), transparent 24%),
+        linear-gradient(160deg, rgba(18, 45, 63, 0.92), rgba(7, 19, 29, 0.96));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-visual::before,
+    .price-visual::after {
+      content: "";
+      position: absolute;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+    }
+
+    .price-visual::before {
+      width: 58%;
+      height: 150px;
+      right: 28px;
+      top: 34px;
+      transform: rotate(-7deg);
+    }
+
+    .price-visual::after {
+      width: 54%;
+      height: 136px;
+      right: 86px;
+      bottom: 26px;
+      transform: rotate(7deg);
+    }
+
+    .price-lock {
+      position: relative;
+      z-index: 1;
+      width: 84px;
+      height: 84px;
+      border-radius: 26px;
+      display: grid;
+      place-items: center;
+      color: #08141f;
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gold), #f5dfb9);
+      box-shadow: 0 20px 44px rgba(221, 183, 120, 0.22);
+    }
+
+    .price-lock::before {
+      content: "";
+      position: absolute;
+      width: 42px;
+      height: 34px;
+      left: 50%;
+      top: -20px;
+      transform: translateX(-50%);
+      border: 7px solid rgba(245, 223, 185, 0.92);
+      border-bottom: 0;
+      border-radius: 26px 26px 0 0;
+    }
+
+    .price-visual-copy {
+      position: relative;
+      z-index: 1;
+      margin-top: 24px;
+      max-width: 17rem;
+      display: grid;
+      gap: 8px;
+    }
+
+    .price-visual-copy strong {
+      font-size: 1.22rem;
+      color: #fff8e8;
+    }
+
+    .price-visual-copy span {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
     .contact-panel,
     .contact-form {
       padding: 26px;
@@ -821,6 +1052,20 @@
       margin: 0;
       color: var(--muted);
       line-height: 1.8;
+    }
+
+    .contact-visual {
+      margin-top: 24px;
+      min-height: 220px;
+      background:
+        radial-gradient(circle at 78% 20%, rgba(134, 210, 199, 0.16), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+    }
+
+    .contact-visual img {
+      width: 100%;
+      min-height: 220px;
+      object-fit: cover;
     }
 
     .contact-list a {
@@ -903,6 +1148,7 @@
         grid-template-columns: 1fr;
       }
 
+      .catalog-masthead,
       .catalog-grid,
       .overview-grid {
         grid-template-columns: 1fr;
@@ -1043,6 +1289,12 @@
           </article>
 
           <aside class="hero-showcase">
+            <figure class="media-frame hero-art-card">
+              <span class="art-badge top">Resort-ready presentation</span>
+              <span class="art-badge bottom">Premium brands | faster buying</span>
+              <img src="{{ url_for('static', filename='graphics/hero-fairway.svg') }}" alt="Stylized premium golf fairway artwork" />
+            </figure>
+
             <div class="showcase-card">
               <span class="eyebrow">What this redesign keeps</span>
               <h3>All sections, better composed.</h3>
@@ -1102,7 +1354,11 @@
               <div class="signature">{{ site.about.signature }}</div>
             </div>
 
-            <div>
+            <div class="about-side">
+              <figure class="media-frame about-visual">
+                <img src="{{ url_for('static', filename='graphics/founder-legacy.svg') }}" alt="Abstract founder legacy graphic" />
+              </figure>
+
               <article class="about-card">
                 <span class="eyebrow">Founder timeline</span>
                 <ul class="milestone-list">
@@ -1129,6 +1385,18 @@
         </div>
 
         <div class="catalog-shell">
+          <div class="catalog-masthead">
+            <div class="catalog-copy-card">
+              <span class="eyebrow">Visual catalog hub</span>
+              <strong>The catalog area now reads like a premium showroom instead of a plain list of links.</strong>
+              <p>Each group keeps the same core content, but richer graphics, clearer hierarchy, and stronger spacing make browsing feel more like discovery than administration.</p>
+            </div>
+
+            <figure class="media-frame catalog-visual">
+              <img src="{{ url_for('static', filename='graphics/catalog-atlas.svg') }}" alt="Stylized catalog and product presentation graphic" />
+            </figure>
+          </div>
+
           <div class="catalog-tabs" role="tablist" aria-label="Catalog categories">
             {% for group in site.catalog_groups %}
               <button
@@ -1200,6 +1468,9 @@
             </div>
 
             <article class="spotlight-panel" aria-live="polite">
+              <figure class="media-frame spotlight-art">
+                <img src="{{ url_for('static', filename='graphics/island-network.svg') }}" alt="Stylized Puerto Rico golf network graphic" />
+              </figure>
               <span class="spotlight-chip" id="location-index">{{ '%02d' % 1 }}</span>
               <h3 id="location-name">{{ site.locations[0].name }}</h3>
               <p id="location-description">{{ site.locations[0].description }}</p>
@@ -1247,9 +1518,17 @@
                 <a class="portal-button primary" href="{{ site.price_portal.signin_url }}" target="_blank" rel="noreferrer">Sign In for Access</a>
                 <a class="portal-button ghost" href="{{ site.price_portal.create_account_url }}" target="_blank" rel="noreferrer">Create Account</a>
               </div>
-            </div>
+              </div>
 
             <div class="card-stack">
+              <div class="price-visual" aria-hidden="true">
+                <div class="price-lock">ASI</div>
+                <div class="price-visual-copy">
+                  <strong>Protected dealer access</strong>
+                  <span>Styled like a premium portal instead of a generic gate.</span>
+                </div>
+              </div>
+
               <article class="price-card">
                 <span class="eyebrow">Protected pricing</span>
                 <h3>Dealer-only access with a stronger entry experience.</h3>
@@ -1286,6 +1565,10 @@
                 <a class="button primary" href="{{ site.contact.whatsapp }}" target="_blank" rel="noreferrer">WhatsApp</a>
                 <a class="button ghost" href="mailto:{{ site.contact.email }}">Email Us</a>
               </div>
+
+              <figure class="media-frame contact-visual">
+                <img src="{{ url_for('static', filename='graphics/island-network.svg') }}" alt="Stylized contact and regional coverage graphic" />
+              </figure>
             </div>
 
             <form class="contact-form" id="quote-form">
